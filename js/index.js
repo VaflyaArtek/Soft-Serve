@@ -7,4 +7,5 @@ document.addEventListener('partialsLoaded', () => {
     import('./homework3/task5.js');
     import('./homework3/task6.js');
     import('./homework3/task7.js');
+    // import('./homework3/task.js');
 });
