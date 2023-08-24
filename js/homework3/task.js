@@ -1,4 +1,4 @@
-/* 
+/*
 // -------------------task 1
 
 const createArray = (start, end) => {
@@ -74,33 +74,69 @@ const arr2 = compact(arr);
 console.log(arr2) ; 
 
 
-
 // -------------------task 5
 
 function separateArraysByType(inputArray) {
-    let numberArray = [];
-    let otherArray = [];
-  
-    function processArray(arr) {
-        for (let item of arr) {
+    const numberArray = [];
+    const otherArray = [];
+
+    function processArray (arr) {
+        for (const item of arr) {
             if (Array.isArray(item)) {
-                processArray(item);
+                processArray(item)
             } else if (typeof item === 'number') {
-                numberArray.push(item);
+                numberArray.push(item)
             } else {
-                otherArray.push(item);
+                otherArray.push(item)
             }
         }
     }
-  
-    processArray(inputArray);
-  
-    return [numberArray, otherArray];
-  }
-  
-  let arr = [5, "Limit", 12, "a", "3", 99, 2, [2, 4, 3, "33", "a", "text"], "strong", "broun"];
-  let arrNew = separateArraysByType(arr);
-  
-  console.log(arrNew);
 
+    processArray(inputArray);
+
+    return [numberArray, otherArray];
+
+}
+  
+let arr = [5, "Limit", 12, "a", "3", 99, 2, [2, 4, 3, "33", "a", "text"], "strong", "broun"];
+let arrNew = separateArraysByType(arr);
+  
+console.log(arrNew);
+
+// -------------------task 6
+const calc = (a, b, op) => {
+    let result = null
+    
+    if (op===1) {
+        result = a-b;
+    } else if (op===2) {
+        result = a*b;
+    } else if (op===3) {
+        result = a/b;
+    } else {
+        result = a+b
+    }
+
+    return result
+}
+
+console.log(typeof(calc(3,0,3)));
+
+// -------------------task 7
+const findUnique = (arr) => {
+    const newArr = [];
+    
+    for (const i of arr) {
+        if (newArr.includes(i)) {
+            return false
+        } else {
+            newArr.push(i);
+        }
+    }
+
+    return true
+}
+
+console.log(findUnique([1, 2, 3, 5, 3]));  // => false
+console.log(findUnique([1, 2, 3, 5, 11])); // => true
 */

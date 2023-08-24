@@ -1,5 +1,4 @@
 // task 1 
-
 const createArray = (start, end) => {
     const result = [];
     
