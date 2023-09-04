@@ -1,0 +1,27 @@
+# Каталоги пакетних менеджерів
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Локальні налаштування IDE
+.idea/
+.vscode/
+
+# Тимчасові файли та кеш
+*.tmp
+*.cache
+*.log
+*.bak
+
+# Локальні файли середовища
+.env
+.env.local
+
+# Кеш браузера та інше
+*.swp
+Thumbs.db
+.DS_Store
+
+
+.prettierrc
