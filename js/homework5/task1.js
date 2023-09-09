@@ -1,48 +1,34 @@
-class Product {
-    constructor(price, name, quanity) {
-        this.price = price;
-        this.name = name;
-        this.raiting = null;
-        this.quanity = quanity;
-        this.inStock = quanity > 0 ? true : false;
+//task 1
+class Circle {
+    constructor(center, radius) {
+        this.center = center;
+        this.radius = radius;
     }
 
-    show() {
-        console.log(
-            `price: ${this.price}$, name: ${this.name}, quaity: ${this.quanity}, instock: ${this.inStock}`
-        );
+    getLength() {
+        return 2 * Math.PI * this.radius;
     }
-    applyDiscount(value) {
-        this.price -= (this.price / 100) * value;
+
+    getLengthFromRadius(radius) {
+        return 2 * Math.PI * radius;
     }
-    getTotalPrice() {
-        return this.price * this.quanity;
+
+    getCopy() {
+        return new Circle({ x: this.center.x, y: this.center.y }, this.radius);
     }
-    setNewPrice(value) {
-        if (value >= 0) this.price = value;
+
+    static createCircle(x, y, r) {
+        return new Circle({ x, y }, r);
     }
-}
 
-const prod1 = new Product(200, "rx5699", 5);
-prod1.setNewPrice(100);
-prod1.applyDiscount(0);
-prod1.show();
-console.log(prod1.getTotalPrice());
+    checkPointInside(point) {
+        const dx = point.x - this.center.x;
+        const dy = point.y - this.center.y;
 
-const prod2 = new Product(399, "rx570", 10);
-prod2.applyDiscount(15);
-prod2.show();
+        return dx * dx + dy * dy <= this.radius * this.radius;
+    }
 
-const prod3 = new Product(1000, "rtx 4080", 0);
-prod3.applyDiscount(10);
-prod3.show();
-
-class Monitor extends Product {
-    constructor(name, price, quanity, matrix, resolution, diagonal) {
-        super(name, price, quanity);
-
-        this.matrix = matrix;
-        this.resolution = resolution;
-        this.diagonal = diagonal;
+    toString() {
+        return `Circle at (${this.center.x}, ${this.center.y}) with radius ${this.radius}`;
     }
 }

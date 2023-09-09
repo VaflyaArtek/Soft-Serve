@@ -10,7 +10,7 @@ document.addEventListener('partialsLoaded', () => {
     import('./homework3/task7.js');
     import('./homework3/task.js');
 });
-*/
+
 
 //homework 4
 document.addEventListener("partialsLoaded", () => {
@@ -21,10 +21,15 @@ document.addEventListener("partialsLoaded", () => {
     import("./homework4/task4.js");
     import("./homework4/task5.js");
 });
+*/
 
-/*
 //homework 5
 document.addEventListener('partialsLoaded', () => {
-    import('./homework5/task1.js');
+    // import('./homework5/task.js');
+    // import('./homework5/task1.js');
+    // import('./homework5/task2.js');
+    // import('./homework5/task3.js');
+    // import('./homework5/task4.js');
+    import('./homework5/task5.js');
 });
-*/
+
