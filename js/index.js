@@ -30,6 +30,5 @@ document.addEventListener('partialsLoaded', () => {
     // import('./homework5/task2.js');
     // import('./homework5/task3.js');
     // import('./homework5/task4.js');
-    import('./homework5/task5.js');
+    // import('./homework5/task5.js');
 });
-
