@@ -301,6 +301,10 @@ body {
     align-items: center;
 }
 
+#outprice {
+    transition: 0.5s;
+}
+
 .price {
     color: #333;
     display: flex;
@@ -471,4 +475,26 @@ body {
     .container {
         padding: 20px;
     }
+}
+
+.discount__input {
+    margin-top: 10px;
+    border: 2px solid #7272c7;
+    border-radius: 2px;
+    height: 1.5rem;
+    padding: 2px;
+}
+
+.discount__input::placeholder {
+    text-align: center;
+    color: #999;
+}
+
+.discount__confirm {
+    position: absolute;
+    z-index: 999;
+}
+
+.none {
+    display: none;
 }
